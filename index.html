@@ -14,7 +14,8 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@600;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -29,11 +30,248 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        /* RESET RULES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+        :root {
+            --black: #3a3a3a;
+            --white: #fff;
+            --green: #2c5794;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
+        ol {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        body {
+            margin: 50px 0;
+            color: var(--black);
+            font: 1rem/1.3 sans-serif;
+        }
+
+        .author-archive {
+            padding: 1.5rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        h1 a {
+            transition: all 0.1s;
+        }
+
+        h1 a:hover {
+            background: var(--green);
+            color: var(--white);
+        }
+
+        input[type="radio"] {
+            position: absolute;
+            left: -9999px;
+        }
+
+        label {
+            display: inline-block;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #696E77;
+            text-align: center;
+            vertical-align: middle;
+            cursor: pointer;
+            user-select: none;
+            background-color: transparent;
+            border: 1px solid transparent;
+            padding: .375rem .75rem;
+            font-size: 1rem;
+            border-radius: 10px;
+            transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out
+        }
+
+
+        /* FILTERS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+        .filters {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .filters * {
+            display: inline-block;
+        }
+
+        .filters label {
+            padding: 0.5rem 1rem;
+            margin-bottom: 0.25rem;
+            min-width: 50px;
+            line-height: normal;
+            cursor: pointer;
+            transition: all 0.1s;
+        }
+
+        .filters label:hover {
+            background: var(--green);
+            color: var(--white);
+        }
+
+        li {
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 45px rgba(0, 0, 0, .07);
+        }
+
+
+        /* FILTERED ELEMENTS (POSTS)
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+        .posts {
+            display: grid;
+            grid-gap: 1.5rem;
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        .posts .post {
+            background: #fafafa;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .posts .post-title {
+            font-size: 1.3rem;
+        }
+
+        .posts .post-title:hover {
+            text-decoration: underline;
+        }
+
+        .posts figcaption {
+            padding: 1rem;
+        }
+
+        .posts .post-categories {
+            margin-bottom: 0.75rem;
+            font-size: 0.75rem;
+        }
+
+        .posts .post-categories * {
+            display: inline-block;
+        }
+
+        .posts .post-categories li {
+            margin-bottom: 0.2rem;
+        }
+
+        .posts .post-categories a {
+            padding: 0.2rem 0.5rem;
+            border-radius: 1rem;
+            border: 1px solid;
+            line-height: normal;
+            transition: all 0.1s;
+        }
+
+        .posts .post-categories a:hover {
+            background: var(--green);
+            color: var(--white);
+        }
+
+
+        /* FILTERING RULES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+        [value="All"]:checked~.filters [for="All"],
+        [value="CSS"]:checked~.filters [for="CSS"],
+        [value="JavaScript"]:checked~.filters [for="JavaScript"],
+        [value="jQuery"]:checked~.filters [for="jQuery"],
+        [value="WordPress"]:checked~.filters [for="WordPress"],
+        [value="Slider"]:checked~.filters [for="Slider"],
+        [value="fullPage.js"]:checked~.filters [for="fullPage.js"] {
+            background: var(--green);
+            color: var(--white);
+        }
+
+        [value="All"]:checked~.posts [data-category] {
+            display: block;
+        }
+
+        [value="CSS"]:checked~.posts .post:not([data-category~="CSS"]),
+        [value="JavaScript"]:checked~.posts .post:not([data-category~="JavaScript"]),
+        [value="jQuery"]:checked~.posts .post:not([data-category~="jQuery"]),
+        [value="WordPress"]:checked~.posts .post:not([data-category~="WordPress"]),
+        [value="Slider"]:checked~.posts .post:not([data-category~="Slider"]),
+        [value="fullPage.js"]:checked~.posts .post:not([data-category~="fullPage.js"]) {
+            display: none;
+        }
+
+
+        /* FOOTER
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+        footer {
+            font-size: 1rem;
+            padding: 0 1.5rem;
+            text-align: right;
+        }
+
+        footer span {
+            color: #e31b23;
+        }
+
+
+        /* MQ
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+        
+
+        @media (min-width:480px)  { 
+            .posts {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+        @media (min-width:600px)  { 
+            .posts {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+    @media (min-width:801px)  { 
+        .posts {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    @media (min-width:1025px) { 
+        .posts {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    @media (min-width:1281px) { 
+        .posts {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    </style>
 </head>
 
 <body>
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-grow text-primary" role="status"></div>
     </div>
     <!-- Spinner End -->
@@ -78,8 +316,10 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-12 col-lg-6">
-                                    <h1 class="display-3 text-dark mb-4 animated slideInDown">Tenemos el seguro que tú necesitas</h1>
-                                    <p class="fs-5 text-body mb-5">Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                                    <h1 class="display-3 text-dark mb-4 animated slideInDown">Tenemos el seguro que tú
+                                        necesitas</h1>
+                                    <p class="fs-5 text-body mb-5">Clita erat ipsum et lorem et sit, sed stet lorem sit
+                                        clita duo justo magna dolore erat amet</p>
                                     <a href="" class="btn btn-primary py-3 px-5">Más detalles</a>
                                 </div>
                             </div>
@@ -92,8 +332,10 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-12 col-lg-6">
-                                    <h1 class="display-3 text-dark mb-4 animated slideInDown">Tu seguridad empieza aquí</h1>
-                                    <p class="fs-5 text-body mb-5">Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                                    <h1 class="display-3 text-dark mb-4 animated slideInDown">Tu seguridad empieza aquí
+                                    </h1>
+                                    <p class="fs-5 text-body mb-5">Clita erat ipsum et lorem et sit, sed stet lorem sit
+                                        clita duo justo magna dolore erat amet</p>
                                     <a href="" class="btn btn-primary py-3 px-5">Más detalles</a>
                                 </div>
                             </div>
@@ -101,13 +343,11 @@
                     </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
-                data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
-                data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
@@ -121,7 +361,8 @@
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="position-relative overflow-hidden rounded ps-5 pt-5 h-100" style="min-height: 400px;">
-                        <img class="position-absolute w-100 h-100" src="img/about.jpg" alt="" style="object-fit: cover;">
+                        <img class="position-absolute w-100 h-100" src="img/about.jpg" alt=""
+                            style="object-fit: cover;">
                         <!--<div class="position-absolute top-0 start-0 bg-white rounded pe-3 pb-3" style="width: 200px; height: 200px;">
                             <div class="d-flex flex-column justify-content-center text-center bg-primary rounded h-100 p-3">
                                 <h1 class="text-white mb-0">25</h1>
@@ -149,8 +390,9 @@
                                 </div>
                             </div>
                         </div>
-                        <p class="mb-4">Tranquilo, aquí te asesoramos con las mejores alternativas para tomar una decisión al 
-                                        momento de adquirir tu seguro de Salud, Vehículo, casa, vida y ahorro</p>
+                        <p class="mb-4">Tranquilo, aquí te asesoramos con las mejores alternativas para tomar una
+                            decisión al
+                            momento de adquirir tu seguro de Salud, Vehículo, casa, vida y ahorro</p>
                     </div>
                 </div>
             </div>
@@ -165,9 +407,11 @@
                 <div class="col-lg-6 facts-text wow fadeIn" data-wow-delay="0.1s">
                     <div class="h-100 px-4 ps-lg-0">
                         <h1 class="text-white mb-4">PLANES DE SEGUROS NACIONALES</h1>
-                        <p class="text-light mb-5">Ofrecen cobertura dentro del país donde la empresa de seguros tiene su sede. Por lo general, estos planes ofrecen una amplia gama de coberturas.</p>
+                        <p class="text-light mb-5">Ofrecen cobertura dentro del país donde la empresa de seguros tiene
+                            su sede. Por lo general, estos planes ofrecen una amplia gama de coberturas.</p>
                         <h1 class="text-white mb-4">PLANES DE SEGUROS INTERNACIONALES</h1>
-                        <p class="text-light mb-5">Ofrecen cobertura en múltiples países y pueden ser una buena opción para personas que viajan con frecuencia o que viven en el extranjero.</p>
+                        <p class="text-light mb-5">Ofrecen cobertura en múltiples países y pueden ser una buena opción
+                            para personas que viajan con frecuencia o que viven en el extranjero.</p>
                     </div>
                 </div>
                 <div class="col-lg-6 facts-counter wow fadeIn" data-wow-delay="0.5s">
@@ -203,11 +447,13 @@
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <h1 class="display-6 mb-5">Hay muchas razones por las que adquirir tu plan de seguro</h1>
-                    <p class="mb-4">El saber que uno está cubierto en caso de una emergencia puede ayudar a reducir el estrés y la ansiedad relacionados con lo desconocido.</p>
+                    <p class="mb-4">El saber que uno está cubierto en caso de una emergencia puede ayudar a reducir el
+                        estrés y la ansiedad relacionados con lo desconocido.</p>
                     <div class="row g-3">
                         <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
                             <div class="bg-light rounded h-100 p-3">
-                                <div class="bg-white d-flex flex-column justify-content-center text-center rounded h-100 py-4 px-3">
+                                <div
+                                    class="bg-white d-flex flex-column justify-content-center text-center rounded h-100 py-4 px-3">
                                     <img class="align-self-center mb-3" src="img/icon/icon-06-primary.png" alt="">
                                     <h5 class="mb-0">Paz mental</h5>
                                 </div>
@@ -215,7 +461,8 @@
                         </div>
                         <div class="col-sm-6 wow fadeIn" data-wow-delay="0.2s">
                             <div class="bg-light rounded h-100 p-3">
-                                <div class="bg-white d-flex flex-column justify-content-center text-center rounded py-4 px-3">
+                                <div
+                                    class="bg-white d-flex flex-column justify-content-center text-center rounded py-4 px-3">
                                     <img class="align-self-center mb-3" src="img/icon/icon-03-primary.png" alt="">
                                     <h5 class="mb-0">Protección Financiera</h5>
                                 </div>
@@ -223,7 +470,8 @@
                         </div>
                         <div class="col-sm-6 wow fadeIn" data-wow-delay="0.3s">
                             <div class="bg-light rounded h-100 p-3">
-                                <div class="bg-white d-flex flex-column justify-content-center text-center rounded py-4 px-3">
+                                <div
+                                    class="bg-white d-flex flex-column justify-content-center text-center rounded py-4 px-3">
                                     <img class="align-self-center mb-3" src="img/icon/icon-04-primary.png" alt="">
                                     <h5 class="mb-0">Cumplimiento Legal</h5>
                                 </div>
@@ -231,7 +479,8 @@
                         </div>
                         <div class="col-sm-6 wow fadeIn" data-wow-delay="0.4s">
                             <div class="bg-light rounded h-100 p-3">
-                                <div class="bg-white d-flex flex-column justify-content-center text-center rounded h-100 py-4 px-3">
+                                <div
+                                    class="bg-white d-flex flex-column justify-content-center text-center rounded h-100 py-4 px-3">
                                     <img class="align-self-center mb-3" src="img/icon/icon-07-primary.png" alt="">
                                     <h5 class="mb-0">Protección de familia</h5>
                                 </div>
@@ -241,7 +490,8 @@
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="position-relative rounded overflow-hidden h-100" style="min-height: 400px;">
-                        <img class="position-absolute w-100 h-100" src="img/feature.jpg" alt="" style="object-fit: cover;">
+                        <img class="position-absolute w-100 h-100" src="img/feature.jpg" alt=""
+                            style="object-fit: cover;">
                     </div>
                 </div>
             </div>
@@ -249,88 +499,166 @@
     </div>
     <!-- Features End -->
 
-    <!-- Service Start -->s
-    <div class="container-xxl py-5">
+    <!-- Service Start -->
+    <section class="author-archive">
         <div class="container">
             <div class="text-center mx-auto" style="max-width: 500px;">
                 <h1 class="display-6 mb-5">Planes de Seguros</h1>
             </div>
-            <div class="row g-4 justify-content-center">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item rounded h-100 p-5">
-                        <div class="d-flex align-items-center ms-n5 mb-4">
-                            <div class="service-icon flex-shrink-0 bg-primary rounded-end me-4">
-                                <img class="img-fluid" src="img/icon/icon-10-light.png" alt="">
+            <input type="radio" id="All" name="categories" value="All" checked>
+            <input type="radio" id="CSS" name="categories" value="CSS">
+            <input type="radio" id="JavaScript" name="categories" value="JavaScript">
+            <input type="radio" id="jQuery" name="categories" value="jQuery">
+            <input type="radio" id="WordPress" name="categories" value="WordPress">
+            <input type="radio" id="Slider" name="categories" value="Slider">
+            <input type="radio" id="fullPage.js" name="categories" value="fullPage.js">
+
+            <ol class="filters">
+                <li>
+                    <label for="All">Todos los planes de seguro</label>
+                </li>
+                <li>
+                    <label for="CSS">Jubilación</label>
+                </li>
+                <li>
+                    <label for="JavaScript">Familia</label>
+                </li>
+                <li>
+                    <label for="jQuery">Vehículo</label>
+                </li>
+                <li>
+                    <label for="WordPress">Salud</label>
+                </li>
+                <li>
+                    <label for="Slider">Bienes Inmuebles</label>
+                </li>
+                <li>
+                    <label for="fullPage.js">Inversiones</label>
+                </li>
+            </ol>
+            <ol class="posts">
+
+                <li class="post" data-category="CSS">
+                    <article>
+                        <div class="wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="service-item rounded h-100 p-5">
+                                <div class="d-flex align-items-center ms-n5 mb-4">
+                                    <div class="service-icon flex-shrink-0 bg-primary rounded-end me-4">
+                                        <img class="img-fluid" src="img/icon/icon-10-light.png" alt="">
+                                    </div>
+                                    <h4 class="mb-0">Seguro de Vida y Ahorro</h4>
+                                </div>
+                                <p class="mb-4">Es una inversión a mediano o largo plazo 
+                                                y requiere una planificación cuidadosa. Sin embargo, 
+                                                puede proporcionar tranquilidad y seguridad al saber que uno está protegido financieramente 
+                                                y que tiene una fuente de ingresos adicional en la jubilación.</p>
+                                <a class="btn btn-light px-3" href="">Saber más</a>
                             </div>
-                            <h4 class="mb-0">Seguro de Vida y Ahorro</h4>
                         </div>
-                        <p class="mb-4">Aliqu diam amet eos erat ipsum et lorem et sit, sed stet lorem sit clita duo justo erat amet</p>
-                        <a class="btn btn-light px-3" href="">Read More</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item rounded h-100 p-5">
-                        <div class="d-flex align-items-center ms-n5 mb-4">
-                            <div class="service-icon flex-shrink-0 bg-primary rounded-end me-4">
-                                <img class="img-fluid" src="img/icon/icon-01-light.png" alt="">
+                    </article>
+                </li>
+
+                <li class="post" data-category="JavaScript">
+                    <article>
+                        <div class="wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="service-item rounded h-100 p-5">
+                                <div class="d-flex align-items-center ms-n5 mb-4">
+                                    <div class="service-icon flex-shrink-0 bg-primary rounded-end me-4">
+                                        <img class="img-fluid" src="img/icon/icon-01-light.png" alt="">
+                                    </div>
+                                    <h4 class="mb-0">Seguro de Vida</h4>
+                                </div>
+                                <p class="mb-4" align="justify">Sabemos que un fallecimiento es muy doloroso para los seres queridos, 
+                                    Los beneficiarios recibirán
+                                    una indemnización acorde al plan adquirido, 
+                                    esto permitirá garantizar la protección económica que el asegurado 
+                                    tenia a su cargo o haya designado.</p>
+                                <a class="btn btn-light px-3" href="">Saber más</a>
                             </div>
-                            <h4 class="mb-0">Seguro de salud</h4>
                         </div>
-                        <p class="mb-4">Aliqu diam amet eos erat ipsum et lorem et sit, sed stet lorem sit clita duo justo erat amet</p>
-                        <a class="btn btn-light px-3" href="">Read More</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item rounded h-100 p-5">
-                        <div class="d-flex align-items-center ms-n5 mb-4">
-                            <div class="service-icon flex-shrink-0 bg-primary rounded-end me-4">
-                                <img class="img-fluid" src="img/icon/icon-05-light.png" alt="">
+                    </article>
+                </li>
+
+                <li class="post" data-category="jQuery">
+                    <article>
+                        <div class="wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="service-item rounded h-100 p-5">
+                                <div class="d-flex align-items-center ms-n5 mb-4">
+                                    <div class="service-icon flex-shrink-0 bg-primary rounded-end me-4">
+                                        <img class="img-fluid" src="img/icon/icon-08-light.png" alt="">
+                                    </div>
+                                    <h4 class="mb-0">Seguro Vehicular</h4>
+                                </div>
+                                <p class="mb-4">Proporciona protección financiera en caso de un accidente de tráfico 
+                                                Es una inversión importante para cualquier conductor responsable. 
+                                                Proporciona protección financiera en caso de accidentes
+                                                y puede ofrecer servicios útiles en carretera para mayor tranquilidad.</p>
+                                <a class="btn btn-light px-3" href="">Saber más</a>
                             </div>
-                            <h4 class="mb-0">Seguro de hogar </h4>
                         </div>
-                        <p class="mb-4">Aliqu diam amet eos erat ipsum et lorem et sit, sed stet lorem sit clita duo justo erat amet</p>
-                        <a class="btn btn-light px-3" href="">Read More</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item rounded h-100 p-5">
-                        <div class="d-flex align-items-center ms-n5 mb-4">
-                            <div class="service-icon flex-shrink-0 bg-primary rounded-end me-4">
-                                <img class="img-fluid" src="img/icon/icon-08-light.png" alt="">
+                    </article>
+                </li>
+
+                <li class="post" data-category="WordPress">
+                    <article>
+                        <div class="wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="service-item rounded h-100 p-5">
+                                <div class="d-flex align-items-center ms-n5 mb-4">
+                                    <div class="service-icon flex-shrink-0 bg-primary rounded-end me-4">
+                                        <img class="img-fluid" src="img/icon/icon-06-light.png" alt="">
+                                    </div>
+                                    <h4 class="mb-0">Seguro de Salud</h4>
+                                </div>
+                                <p class="mb-4">Por que una enfermedad llega sin avisar, esto puede afectar seriamente tu salud y tu economía. 
+                                                Tu salud en las mejores manos te asesoramos 
+                                                para obtener la mejor cobertura a nivel nacional e internacional.</p>
+                                <a class="btn btn-light px-3" href="">Saber más</a>
                             </div>
-                            <h4 class="mb-0">Seguro de vehículo</h4>
                         </div>
-                        <p class="mb-4">Aliqu diam amet eos erat ipsum et lorem et sit, sed stet lorem sit clita duo justo erat amet</p>
-                        <a class="btn btn-light px-3" href="">Read More</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item rounded h-100 p-5">
-                        <div class="d-flex align-items-center ms-n5 mb-4">
-                            <div class="service-icon flex-shrink-0 bg-primary rounded-end me-4">
-                                <img class="img-fluid" src="img/icon/icon-07-light.png" alt="">
+                    </article>
+                </li>
+
+                <li class="post" data-category="Slider">
+                    <article>
+                        <div class="wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="service-item rounded h-100 p-5">
+                                <div class="d-flex align-items-center ms-n5 mb-4">
+                                    <div class="service-icon flex-shrink-0 bg-primary rounded-end me-4">
+                                        <img class="img-fluid" src="img/icon/icon-05-light.png" alt="">
+                                    </div>
+                                    <h4 class="mb-0">Seguro de Bienes Inmuebles</h4>
+                                </div>
+                                <p class="mb-4">Puede ser esencial para los propietarios de viviendas o comercios, 
+                                                ya que los bienes inmuebles pueden ser afectados por varios riesgos, 
+                                                como incendios, robos, inundaciones y terremotos.</p>
+                                <a class="btn btn-light px-3" href="">Saber más</a>
                             </div>
-                            <h4 class="mb-0">Seguro de negocios</h4>
                         </div>
-                        <p class="mb-4">Aliqu diam amet eos erat ipsum et lorem et sit, sed stet lorem sit clita duo justo erat amet</p>
-                        <a class="btn btn-light px-3" href="">Read More</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item rounded h-100 p-5">
-                        <div class="d-flex align-items-center ms-n5 mb-4">
-                            <div class="service-icon flex-shrink-0 bg-primary rounded-end me-4">
-                                <img class="img-fluid" src="img/icon/icon-06-light.png" alt="">
+                    </article>
+                </li>
+
+                <li class="post" data-category="fullPage.js">
+                    <article>
+                        <div class="wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="service-item rounded h-100 p-5">
+                                <div class="d-flex align-items-center ms-n5 mb-4">
+                                    <div class="service-icon flex-shrink-0 bg-primary rounded-end me-4">
+                                        <img class="img-fluid" src="img/icon/icon-07-light.png" alt="">
+                                    </div>
+                                    <h4 class="mb-0">Inversiones</h4>
+                                </div>
+                                <p class="mb-4">Puede ser esencial para los propietarios de viviendas o comercios, 
+                                                ya que los bienes inmuebles pueden ser afectados por varios riesgos, 
+                                                como incendios, robos, inundaciones y terremotos.</p>
+                                <a class="btn btn-light px-3" href="">Saber más</a>
                             </div>
-                            <h4 class="mb-0">Seguro de propiedad</h4>
                         </div>
-                        <p class="mb-4">Aliqu diam amet eos erat ipsum et lorem et sit, sed stet lorem sit clita duo justo erat amet</p>
-                        <a class="btn btn-light px-3" href="">Read More</a>
-                    </div>
-                </div>
-            </div>
+                    </article>
+                </li>
+
+            </ol>
         </div>
-    </div>
+    </section>
     <!-- Service End -->
 
     <!-- Appointment Start -->
@@ -338,14 +666,12 @@
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.3s">
-                    <h1 class="display-6 text-white mb-5">Necesitas información extra?, contáctanos</h1>
-                    <p class="text-white mb-5">Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet. Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna.</p>
-                    <div class="bg-white rounded p-3">
-                        <div class="d-flex align-items-center bg-primary rounded p-3">
-                            <img class="flex-shrink-0 rounded-circle me-3" src="img/profile.jpg" alt="" >
-                            <h5 class="text-white mb-0">Call Us: +012 345 6789</h5>
-                        </div>
-                    </div>
+                    <h1 class="display-6 text-white mb-5">¡Nos encantaría saber de ti!</h1>
+                    <p class="text-white mb-5">Si tienes alguna pregunta, comentario o simplemente quieres ponerte en contacto con nosotros, 
+                                                no dudes en escribirnos. Puedes enviarnos un correo electrónico o llenar nuestro formulario 
+                                                de contacto en nuestro sitio web. Nos comprometemos a responder lo antes posible y ayudarte 
+                                                en lo que necesites. Tu opinión es importante para nosotros y nos esforzamos por brindarte 
+                                                el mejor servicio posible. ¡Esperamos escuchar de ti pronto!</p>
                 </div>
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                     <div class="bg-white rounded p-5">
@@ -377,7 +703,8 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 80px"></textarea>
+                                        <textarea class="form-control" placeholder="Leave a message here" id="message"
+                                            style="height: 80px"></textarea>
                                         <label for="message">Déjanos tu mensaje</label>
                                     </div>
                                 </div>
@@ -499,21 +826,12 @@
                     <div class="owl-carousel testimonial-carousel">
                         <div class="testimonial-item text-center">
                             <img class="img-fluid rounded mx-auto mb-4" src="img/testimonial-1.jpg" alt="">
-                            <p class="fs-5">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.</p>
-                            <h5>Client Name</h5>
-                            <span>Profession</span>
                         </div>
                         <div class="testimonial-item text-center">
                             <img class="img-fluid rounded mx-auto mb-4" src="img/testimonial-2.jpg" alt="">
-                            <p class="fs-5">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.</p>
-                            <h5>Client Name</h5>
-                            <span>Profession</span>
                         </div>
                         <div class="testimonial-item text-center">
                             <img class="img-fluid rounded mx-auto mb-4" src="img/testimonial-3.jpg" alt="">
-                            <p class="fs-5">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.</p>
-                            <h5>Client Name</h5>
-                            <span>Profession</span>
                         </div>
                     </div>
                 </div>
@@ -535,35 +853,26 @@
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
                     <img class="img-fluid me-3" src="img/icon/seguvim-alterno-blanco.png" alt="">
-                    <p>Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita</p>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-square me-1" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square me-1" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square me-1" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-square me-0" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-square me-2" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square me-2" href=""><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h5 class="text-light mb-4">Address</h5>
+                    <h5 class="text-light mb-4">Encuentranos</h5>
                     <p><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                    <p><i class="fa fa-phone-alt me-3"></i>+593 99 279 0807</p>
+                    <p><i class="fa fa-envelope me-3"></i>info@seguvim.com</p>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h5 class="text-light mb-4">Quick Links</h5>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Our Services</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
-                    <a class="btn btn-link" href="">Support</a>
+                    <h5 class="text-light mb-4">Accesos</h5>
+                    <a class="btn btn-link" href="">Sobre Nosotros</a>
+                    <a class="btn btn-link" href="">Planes de Seguro</a>
+                    <a class="btn btn-link" href="">Contáctanos</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h5 class="text-light mb-4">Newsletter</h5>
-                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-                    <div class="position-relative mx-auto" style="max-width: 400px;">
-                        <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-secondary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
-                    </div>
+                    <h5 class="text-light mb-4">Escríbenos</h5>
+                    <a href="" class="btn btn-primary px-3 d-none d-lg-block">Cotiza con nosotros</a>
                 </div>
             </div>
         </div>
@@ -571,11 +880,11 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a href="#">Your Site Name</a>, All Right Reserved.
+                        &copy; <a href="#">SEGUVIM</a>, Todos los derechos resevados.
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        Designed By <a href="https://htmlcodex.com">HTML Codex</a>
+                        Un diseño de  <a href="https://htmlcodex.com">R&B Estudio</a>
                     </div>
                 </div>
             </div>
@@ -594,6 +903,17 @@
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#myInput").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#myList li").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
