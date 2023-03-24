@@ -31,241 +31,9 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 
-    <style>
-        /* RESET RULES
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-        :root {
-            --black: #3a3a3a;
-            --white: #fff;
-            --green: #2c5794;
-        }
+    <!-- seguro Stylesheet -->
+    <link href="css/seguros.css" rel="stylesheet">
 
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        img {
-            display: block;
-            max-width: 100%;
-            height: auto;
-        }
-
-        ol {
-            list-style: none;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        body {
-            margin: 50px 0;
-            color: var(--black);
-            font: 1rem/1.3 sans-serif;
-        }
-
-        .author-archive {
-            padding: 1.5rem;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        h1 {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-
-        h1 a {
-            transition: all 0.1s;
-        }
-
-        h1 a:hover {
-            background: var(--green);
-            color: var(--white);
-        }
-
-        input[type="radio"] {
-            position: absolute;
-            left: -9999px;
-        }
-
-        label {
-            display: inline-block;
-            font-weight: 400;
-            line-height: 1.5;
-            color: #696E77;
-            text-align: center;
-            vertical-align: middle;
-            cursor: pointer;
-            user-select: none;
-            background-color: transparent;
-            border: 1px solid transparent;
-            padding: .375rem .75rem;
-            font-size: 1rem;
-            border-radius: 10px;
-            transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out
-        }
-
-
-        /* FILTERS
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-        .filters {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-
-        .filters * {
-            display: inline-block;
-        }
-
-        .filters label {
-            padding: 0.5rem 1rem;
-            margin-bottom: 0.25rem;
-            min-width: 50px;
-            line-height: normal;
-            cursor: pointer;
-            transition: all 0.1s;
-        }
-
-        .filters label:hover {
-            background: var(--green);
-            color: var(--white);
-        }
-
-        li {
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 0 45px rgba(0, 0, 0, .07);
-        }
-
-
-        /* FILTERED ELEMENTS (POSTS)
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-        .posts {
-            display: grid;
-            grid-gap: 1.5rem;
-            grid-template-columns: repeat(1, 1fr);
-        }
-
-        .posts .post {
-            background: #fafafa;
-            border: 1px solid rgba(0, 0, 0, 0.1);
-        }
-
-        .posts .post-title {
-            font-size: 1.3rem;
-        }
-
-        .posts .post-title:hover {
-            text-decoration: underline;
-        }
-
-        .posts figcaption {
-            padding: 1rem;
-        }
-
-        .posts .post-categories {
-            margin-bottom: 0.75rem;
-            font-size: 0.75rem;
-        }
-
-        .posts .post-categories * {
-            display: inline-block;
-        }
-
-        .posts .post-categories li {
-            margin-bottom: 0.2rem;
-        }
-
-        .posts .post-categories a {
-            padding: 0.2rem 0.5rem;
-            border-radius: 1rem;
-            border: 1px solid;
-            line-height: normal;
-            transition: all 0.1s;
-        }
-
-        .posts .post-categories a:hover {
-            background: var(--green);
-            color: var(--white);
-        }
-
-
-        /* FILTERING RULES
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-        [value="All"]:checked~.filters [for="All"],
-        [value="CSS"]:checked~.filters [for="CSS"],
-        [value="JavaScript"]:checked~.filters [for="JavaScript"],
-        [value="jQuery"]:checked~.filters [for="jQuery"],
-        [value="WordPress"]:checked~.filters [for="WordPress"],
-        [value="Slider"]:checked~.filters [for="Slider"],
-        [value="fullPage.js"]:checked~.filters [for="fullPage.js"] {
-            background: var(--green);
-            color: var(--white);
-        }
-
-        [value="All"]:checked~.posts [data-category] {
-            display: block;
-        }
-
-        [value="CSS"]:checked~.posts .post:not([data-category~="CSS"]),
-        [value="JavaScript"]:checked~.posts .post:not([data-category~="JavaScript"]),
-        [value="jQuery"]:checked~.posts .post:not([data-category~="jQuery"]),
-        [value="WordPress"]:checked~.posts .post:not([data-category~="WordPress"]),
-        [value="Slider"]:checked~.posts .post:not([data-category~="Slider"]),
-        [value="fullPage.js"]:checked~.posts .post:not([data-category~="fullPage.js"]) {
-            display: none;
-        }
-
-
-        /* FOOTER
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-        footer {
-            font-size: 1rem;
-            padding: 0 1.5rem;
-            text-align: right;
-        }
-
-        footer span {
-            color: #e31b23;
-        }
-
-
-        /* MQ
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-        
-
-        @media (min-width:480px)  { 
-            .posts {
-            grid-template-columns: repeat(1, 1fr);
-        }
-    }
-        @media (min-width:600px)  { 
-            .posts {
-            grid-template-columns: repeat(1, 1fr);
-        }
-    }
-    @media (min-width:801px)  { 
-        .posts {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
-    @media (min-width:1025px) { 
-        .posts {
-            grid-template-columns: repeat(3, 1fr);
-        }
-    }
-    @media (min-width:1281px) { 
-        .posts {
-            grid-template-columns: repeat(3, 1fr);
-        }
-    }
-    </style>
 </head>
 
 <body>
@@ -288,17 +56,7 @@
             <div class="navbar-nav mx-auto bg-light rounded pe-4 py-3 py-lg-0">
                 <a href="index.html" class="nav-item nav-link active">Inicio</a>
                 <a href="about.html" class="nav-item nav-link">Sobre nosotros</a>
-                <a href="service.html" class="nav-item nav-link">Planes de seguros</a>
-                <!-- Navbar Start <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                    <div class="dropdown-menu bg-light border-0 m-0">
-                        <a href="feature.html" class="dropdown-item">Features</a>
-                        <a href="appointment.html" class="dropdown-item">Appointment</a>
-                        <a href="team.html" class="dropdown-item">Team Members</a>
-                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                        <a href="404.html" class="dropdown-item">404 Page</a>
-                    </div>
-                </div>-->
+                <a href="planesdeseguro.html" class="nav-item nav-link">Planes de seguros</a>
                 <a href="contact.html" class="nav-item nav-link">Contáctanos</a>
             </div>
         </div>
@@ -316,11 +74,9 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-12 col-lg-6">
-                                    <h1 class="display-3 text-dark mb-4 animated slideInDown">Tenemos el seguro que tú
-                                        necesitas</h1>
-                                    <p class="fs-5 text-body mb-5">Clita erat ipsum et lorem et sit, sed stet lorem sit
-                                        clita duo justo magna dolore erat amet</p>
-                                    <a href="" class="btn btn-primary py-3 px-5">Más detalles</a>
+                                    <h1 class="display-3 text-dark mb-4 animated slideInDown">Protege lo que más quieres con nuestros seguros</h1>
+                                    <p class="fs-5 text-body mb-5"></p>
+                                    <!-- Carousel Start <a href="" class="btn btn-primary py-3 px-5">Más detalles</a>-->
                                 </div>
                             </div>
                         </div>
@@ -332,11 +88,10 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-12 col-lg-6">
-                                    <h1 class="display-3 text-dark mb-4 animated slideInDown">Tu seguridad empieza aquí
+                                    <h1 class="display-3 text-dark mb-4 animated slideInDown">Tu seguridad es nuestra prioridad
                                     </h1>
-                                    <p class="fs-5 text-body mb-5">Clita erat ipsum et lorem et sit, sed stet lorem sit
-                                        clita duo justo magna dolore erat amet</p>
-                                    <a href="" class="btn btn-primary py-3 px-5">Más detalles</a>
+                                    <p class="fs-5 text-body mb-5"></p>
+                                    <!--<a href="" class="btn btn-primary py-3 px-5">Más detalles</a>-->
                                 </div>
                             </div>
                         </div>
@@ -720,94 +475,6 @@
     </div>
     <!-- Appointment End -->
 
-    <!-- Team Start 
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center mx-auto" style="max-width: 500px;">
-                <h1 class="display-6 mb-5">Meet Our Professional Team Members</h1>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item rounded">
-                        <img class="img-fluid" src="img/team-1.jpg" alt="">
-                        <div class="text-center p-4">
-                            <h5>Full Name</h5>
-                            <span>Designation</span>
-                        </div>
-                        <div class="team-text text-center bg-white p-4">
-                            <h5>Full Name</h5>
-                            <p>Designation</p>
-                            <div class="d-flex justify-content-center">
-                                <a class="btn btn-square btn-light m-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-light m-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-light m-1" href=""><i class="fab fa-youtube"></i></a>
-                                <a class="btn btn-square btn-light m-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item rounded">
-                        <img class="img-fluid" src="img/team-2.jpg" alt="">
-                        <div class="text-center p-4">
-                            <h5>Full Name</h5>
-                            <span>Designation</span>
-                        </div>
-                        <div class="team-text text-center bg-white p-4">
-                            <h5>Full Name</h5>
-                            <p>Designation</p>
-                            <div class="d-flex justify-content-center">
-                                <a class="btn btn-square btn-light m-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-light m-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-light m-1" href=""><i class="fab fa-youtube"></i></a>
-                                <a class="btn btn-square btn-light m-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="team-item rounded">
-                        <img class="img-fluid" src="img/team-3.jpg" alt="">
-                        <div class="text-center p-4">
-                            <h5>Full Name</h5>
-                            <span>Designation</span>
-                        </div>
-                        <div class="team-text text-center bg-white p-4">
-                            <h5>Full Name</h5>
-                            <p>Designation</p>
-                            <div class="d-flex justify-content-center">
-                                <a class="btn btn-square btn-light m-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-light m-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-light m-1" href=""><i class="fab fa-youtube"></i></a>
-                                <a class="btn btn-square btn-light m-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="team-item rounded">
-                        <img class="img-fluid" src="img/team-4.jpg" alt="">
-                        <div class="text-center p-4">
-                            <h5>Full Name</h5>
-                            <span>Designation</span>
-                        </div>
-                        <div class="team-text text-center bg-white p-4">
-                            <h5>Full Name</h5>
-                            <p>Designation</p>
-                            <div class="d-flex justify-content-center">
-                                <a class="btn btn-square btn-light m-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-light m-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-light m-1" href=""><i class="fab fa-youtube"></i></a>
-                                <a class="btn btn-square btn-light m-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    Team End -->
-
     <!-- Testimonial Start -->
     <div class="container-xxl py-5">
         <div class="container">
@@ -904,19 +571,10 @@
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
 
-    <script>
-        $(document).ready(function () {
-            $("#myInput").on("keyup", function () {
-                var value = $(this).val().toLowerCase();
-                $("#myList li").filter(function () {
-                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-                });
-            });
-        });
-    </script>
-
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <!-- seguros Javascript -->
+    <script src="js/seguros.js"></script>
 </body>
 
 </html>
