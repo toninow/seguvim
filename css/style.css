@@ -469,3 +469,18 @@
 .footer .copyright a:hover {
     color: #FFFFFF;
 }
+
+.botonplanes{
+    color: #ffffff;padding: 10px;
+    -webkit-border-radius: 28px;
+    -moz-border-radius: 28px;
+    border-radius: 28px;
+    border: solid #ffffff 1px;
+    margin-left: 25%;
+    margin-right: 25%;
+    text-align: center;
+}
+.botonplanes:hover {
+    background: white;
+    color: #196ECD;
+  }
