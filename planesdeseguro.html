@@ -14,7 +14,8 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@600;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -30,13 +31,63 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 
-        <!-- seguro Stylesheet -->
-        <link href="css/seguros.css" rel="stylesheet">
+    <!-- seguro Stylesheet -->
+    <link href="css/seguros.css" rel="stylesheet">
+    <style>
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 60%;
+        }
+
+        /* The Close Button */
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body>
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-grow text-primary" role="status"></div>
     </div>
     <!-- Spinner End -->
@@ -95,168 +146,209 @@
             <div class="text-center mx-auto" style="max-width: 500px;">
                 <h1 class="display-6 mb-5">Es la mejor inversión que puedes hacer en tu futuro.</h1>
             </div>
-                <!-- Service Start -->
-    <section class="author-archive">
-        <div class="container">
-            <input type="radio" id="All" name="categories" value="All" checked>
-            <input type="radio" id="CSS" name="categories" value="CSS">
-            <input type="radio" id="JavaScript" name="categories" value="JavaScript">
-            <input type="radio" id="jQuery" name="categories" value="jQuery">
-            <input type="radio" id="WordPress" name="categories" value="WordPress">
-            <input type="radio" id="Slider" name="categories" value="Slider">
-            <input type="radio" id="fullPage.js" name="categories" value="fullPage.js">
+            <!-- Service Start -->
+            <section class="author-archive">
+                <div class="container">
+                    <input type="radio" id="All" name="categories" value="All" checked>
+                    <input type="radio" id="CSS" name="categories" value="CSS">
+                    <input type="radio" id="JavaScript" name="categories" value="JavaScript">
+                    <input type="radio" id="jQuery" name="categories" value="jQuery">
+                    <input type="radio" id="WordPress" name="categories" value="WordPress">
+                    <input type="radio" id="Slider" name="categories" value="Slider">
+                    <input type="radio" id="fullPage.js" name="categories" value="fullPage.js">
 
-            <ol class="filters">
-                <li>
-                    <label for="All">Todos los planes de seguro</label>
-                </li>
-                <li>
-                    <label for="CSS">Jubilación</label>
-                </li>
-                <li>
-                    <label for="JavaScript">Familia</label>
-                </li>
-                <li>
-                    <label for="jQuery">Vehículo</label>
-                </li>
-                <li>
-                    <label for="WordPress">Salud</label>
-                </li>
-                <li>
-                    <label for="Slider">Bienes Inmuebles</label>
-                </li>
-                <li>
-                    <label for="fullPage.js">Inversiones</label>
-                </li>
-            </ol>
-            <ol class="posts">
+                    <ol class="filters">
+                        <li>
+                            <label for="All">Todos los planes de seguro</label>
+                        </li>
+                        <li>
+                            <label for="CSS">Jubilación</label>
+                        </li>
+                        <li>
+                            <label for="JavaScript">Familia</label>
+                        </li>
+                        <li>
+                            <label for="jQuery">Vehículo</label>
+                        </li>
+                        <li>
+                            <label for="WordPress">Salud</label>
+                        </li>
+                        <li>
+                            <label for="Slider">Bienes Inmuebles</label>
+                        </li>
+                        <li>
+                            <label for="fullPage.js">Inversiones</label>
+                        </li>
+                    </ol>
+                    <ol class="posts">
 
-                <li class="post" data-category="CSS">
-                    <article>
-                        <div class="wow fadeInUp" data-wow-delay="0.1s">
-                            <div class="service-item rounded h-100 p-5">
-                                <div class="d-flex align-items-center ms-n5 mb-4">
-                                    <div class="service-icon flex-shrink-0 bg-primary rounded-end me-4">
-                                        <img class="img-fluid" src="img/icon/icon-10-light.png" alt="">
+                        <li class="post" data-category="CSS">
+                            <article>
+                                <div class="wow fadeInUp" data-wow-delay="0.1s">
+                                    <div class="service-item rounded h-100 p-5">
+                                        <div class="d-flex align-items-center ms-n5 mb-4">
+                                            <div class="service-icon flex-shrink-0 bg-primary rounded-end me-4">
+                                                <img class="img-fluid" src="img/icon/icon-10-light.png" alt="">
+                                            </div>
+                                            <h4 class="mb-0">Seguro de Vida y Ahorro</h4>
+                                        </div>
+                                        <p class="mb-4">Es una inversión a mediano o largo plazo
+                                            y requiere una planificación cuidadosa. Sin embargo,
+                                            puede proporcionar tranquilidad y seguridad al saber que uno está protegido
+                                            financieramente
+                                            y que tiene una fuente de ingresos adicional en la jubilación.</p>
+                                        <a class="btn btn-light px-3" id="myBtn">Saber más</a>
                                     </div>
-                                    <h4 class="mb-0">Seguro de Vida y Ahorro</h4>
                                 </div>
-                                <p class="mb-4">Es una inversión a mediano o largo plazo 
-                                                y requiere una planificación cuidadosa. Sin embargo, 
-                                                puede proporcionar tranquilidad y seguridad al saber que uno está protegido financieramente 
-                                                y que tiene una fuente de ingresos adicional en la jubilación.</p>
-                                <a class="btn btn-light px-3" href="">Saber más</a>
-                            </div>
-                        </div>
-                    </article>
-                </li>
+                            </article>
 
-                <li class="post" data-category="JavaScript">
-                    <article>
-                        <div class="wow fadeInUp" data-wow-delay="0.1s">
-                            <div class="service-item rounded h-100 p-5">
-                                <div class="d-flex align-items-center ms-n5 mb-4">
-                                    <div class="service-icon flex-shrink-0 bg-primary rounded-end me-4">
-                                        <img class="img-fluid" src="img/icon/icon-01-light.png" alt="">
+                            <!-- The Modal -->
+                            <div id="myModal" class="modal">
+
+                                <!-- Modal content -->
+                                <div class="modal-content">
+                                    <span class="close">&times;</span>
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            <div class="service-icon flex-shrink-0 bg-primary rounded-end me-4">
+                                                <img class="img-fluid"
+                                                    src="https://ekosnegocios.com/image/posts/header/12402.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <h1>Seguro de Vida y Ahorro</h1>
+                                            <div class="row">
+                                                <div class="col-md-6" style="padding: 1%;">• Seguridad</div>
+                                                <div class="col-md-6" style="padding: 1%;">• Trasparencia</div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6" style="padding: 1%;">• Rentabilidad anual Garantizada</div>
+                                                <div class="col-md-6" style="padding: 1%;">• Préstamos</div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6" style="padding: 1%;">• Anticipo</div>
+                                                <div class="col-md-6" style="padding: 1%;">• Flexibilidad</div>
+                                            </div>
+                                            <div class="row">
+                                                <a class="btn btn-primary px-3 d-none d-lg-block" href="" >Lo quiero!</a>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <h4 class="mb-0">Seguro de Vida</h4>
                                 </div>
-                                <p class="mb-4" align="justify">Sabemos que un fallecimiento es muy doloroso para los seres queridos, 
-                                    Los beneficiarios recibirán
-                                    una indemnización acorde al plan adquirido, 
-                                    esto permitirá garantizar la protección económica que el asegurado 
-                                    tenia a su cargo o haya designado.</p>
-                                <a class="btn btn-light px-3" href="">Saber más</a>
-                            </div>
-                        </div>
-                    </article>
-                </li>
 
-                <li class="post" data-category="jQuery">
-                    <article>
-                        <div class="wow fadeInUp" data-wow-delay="0.1s">
-                            <div class="service-item rounded h-100 p-5">
-                                <div class="d-flex align-items-center ms-n5 mb-4">
-                                    <div class="service-icon flex-shrink-0 bg-primary rounded-end me-4">
-                                        <img class="img-fluid" src="img/icon/icon-08-light.png" alt="">
+                            </div>
+                        </li>
+                        <li class="post" data-category="JavaScript">
+                            <article>
+                                <div class="wow fadeInUp" data-wow-delay="0.1s">
+                                    <div class="service-item rounded h-100 p-5">
+                                        <div class="d-flex align-items-center ms-n5 mb-4">
+                                            <div class="service-icon flex-shrink-0 bg-primary rounded-end me-4">
+                                                <img class="img-fluid" src="img/icon/icon-01-light.png" alt="">
+                                            </div>
+                                            <h4 class="mb-0">Seguro de Vida</h4>
+                                        </div>
+                                        <p class="mb-4" align="justify">Sabemos que un fallecimiento es muy doloroso
+                                            para los seres queridos,
+                                            Los beneficiarios recibirán
+                                            una indemnización acorde al plan adquirido,
+                                            esto permitirá garantizar la protección económica que el asegurado
+                                            tenia a su cargo o haya designado.</p>
+                                        <a class="btn btn-light px-3" href="">Saber más</a>
                                     </div>
-                                    <h4 class="mb-0">Seguro Vehicular</h4>
                                 </div>
-                                <p class="mb-4">Proporciona protección financiera en caso de un accidente de tráfico 
-                                                Es una inversión importante para cualquier conductor responsable. 
-                                                Proporciona protección financiera en caso de accidentes
-                                                y puede ofrecer servicios útiles en carretera para mayor tranquilidad.</p>
-                                <a class="btn btn-light px-3" href="">Saber más</a>
-                            </div>
-                        </div>
-                    </article>
-                </li>
+                            </article>
+                        </li>
 
-                <li class="post" data-category="WordPress">
-                    <article>
-                        <div class="wow fadeInUp" data-wow-delay="0.1s">
-                            <div class="service-item rounded h-100 p-5">
-                                <div class="d-flex align-items-center ms-n5 mb-4">
-                                    <div class="service-icon flex-shrink-0 bg-primary rounded-end me-4">
-                                        <img class="img-fluid" src="img/icon/icon-06-light.png" alt="">
+                        <li class="post" data-category="jQuery">
+                            <article>
+                                <div class="wow fadeInUp" data-wow-delay="0.1s">
+                                    <div class="service-item rounded h-100 p-5">
+                                        <div class="d-flex align-items-center ms-n5 mb-4">
+                                            <div class="service-icon flex-shrink-0 bg-primary rounded-end me-4">
+                                                <img class="img-fluid" src="img/icon/icon-08-light.png" alt="">
+                                            </div>
+                                            <h4 class="mb-0">Seguro Vehicular</h4>
+                                        </div>
+                                        <p class="mb-4">Proporciona protección financiera en caso de un accidente de
+                                            tráfico
+                                            Es una inversión importante para cualquier conductor responsable.
+                                            Proporciona protección financiera en caso de accidentes
+                                            y puede ofrecer servicios útiles en carretera para mayor tranquilidad.</p>
+                                        <a class="btn btn-light px-3" href="">Saber más</a>
                                     </div>
-                                    <h4 class="mb-0">Seguro de Salud</h4>
                                 </div>
-                                <p class="mb-4">Por que una enfermedad llega sin avisar, esto puede afectar seriamente tu salud y tu economía. 
-                                                Tu salud en las mejores manos te asesoramos 
-                                                para obtener la mejor cobertura a nivel nacional e internacional.</p>
-                                <a class="btn btn-light px-3" href="">Saber más</a>
-                            </div>
-                        </div>
-                    </article>
-                </li>
+                            </article>
+                        </li>
 
-                <li class="post" data-category="Slider">
-                    <article>
-                        <div class="wow fadeInUp" data-wow-delay="0.1s">
-                            <div class="service-item rounded h-100 p-5">
-                                <div class="d-flex align-items-center ms-n5 mb-4">
-                                    <div class="service-icon flex-shrink-0 bg-primary rounded-end me-4">
-                                        <img class="img-fluid" src="img/icon/icon-05-light.png" alt="">
+                        <li class="post" data-category="WordPress">
+                            <article>
+                                <div class="wow fadeInUp" data-wow-delay="0.1s">
+                                    <div class="service-item rounded h-100 p-5">
+                                        <div class="d-flex align-items-center ms-n5 mb-4">
+                                            <div class="service-icon flex-shrink-0 bg-primary rounded-end me-4">
+                                                <img class="img-fluid" src="img/icon/icon-06-light.png" alt="">
+                                            </div>
+                                            <h4 class="mb-0">Seguro de Salud</h4>
+                                        </div>
+                                        <p class="mb-4">Por que una enfermedad llega sin avisar, esto puede afectar
+                                            seriamente tu salud y tu economía.
+                                            Tu salud en las mejores manos te asesoramos
+                                            para obtener la mejor cobertura a nivel nacional e internacional.</p>
+                                        <a class="btn btn-light px-3" href="">Saber más</a>
                                     </div>
-                                    <h4 class="mb-0">Seguro de Bienes Inmuebles</h4>
                                 </div>
-                                <p class="mb-4">Puede ser esencial para los propietarios de viviendas o comercios, 
-                                                ya que los bienes inmuebles pueden ser afectados por varios riesgos, 
-                                                como incendios, robos, inundaciones y terremotos.</p>
-                                <a class="btn btn-light px-3" href="">Saber más</a>
-                            </div>
-                        </div>
-                    </article>
-                </li>
+                            </article>
+                        </li>
 
-                <li class="post" data-category="fullPage.js">
-                    <article>
-                        <div class="wow fadeInUp" data-wow-delay="0.1s">
-                            <div class="service-item rounded h-100 p-5">
-                                <div class="d-flex align-items-center ms-n5 mb-4">
-                                    <div class="service-icon flex-shrink-0 bg-primary rounded-end me-4">
-                                        <img class="img-fluid" src="img/icon/icon-07-light.png" alt="">
+                        <li class="post" data-category="Slider">
+                            <article>
+                                <div class="wow fadeInUp" data-wow-delay="0.1s">
+                                    <div class="service-item rounded h-100 p-5">
+                                        <div class="d-flex align-items-center ms-n5 mb-4">
+                                            <div class="service-icon flex-shrink-0 bg-primary rounded-end me-4">
+                                                <img class="img-fluid" src="img/icon/icon-05-light.png" alt="">
+                                            </div>
+                                            <h4 class="mb-0">Seguro de Bienes Inmuebles</h4>
+                                        </div>
+                                        <p class="mb-4">Puede ser esencial para los propietarios de viviendas o
+                                            comercios,
+                                            ya que los bienes inmuebles pueden ser afectados por varios riesgos,
+                                            como incendios, robos, inundaciones y terremotos.</p>
+                                        <a class="btn btn-light px-3" href="">Saber más</a>
                                     </div>
-                                    <h4 class="mb-0">Inversiones</h4>
                                 </div>
-                                <p class="mb-4">Puede ser esencial para los propietarios de viviendas o comercios, 
-                                                ya que los bienes inmuebles pueden ser afectados por varios riesgos, 
-                                                como incendios, robos, inundaciones y terremotos.</p>
-                                <a class="btn btn-light px-3" href="">Saber más</a>
-                            </div>
-                        </div>
-                    </article>
-                </li>
+                            </article>
+                        </li>
 
-            </ol>
-        </div>
-    </section>
-    <!-- Service End -->
+                        <li class="post" data-category="fullPage.js">
+                            <article>
+                                <div class="wow fadeInUp" data-wow-delay="0.1s">
+                                    <div class="service-item rounded h-100 p-5">
+                                        <div class="d-flex align-items-center ms-n5 mb-4">
+                                            <div class="service-icon flex-shrink-0 bg-primary rounded-end me-4">
+                                                <img class="img-fluid" src="img/icon/icon-07-light.png" alt="">
+                                            </div>
+                                            <h4 class="mb-0">Inversiones</h4>
+                                        </div>
+                                        <p class="mb-4">Puede ser esencial para los propietarios de viviendas o
+                                            comercios,
+                                            ya que los bienes inmuebles pueden ser afectados por varios riesgos,
+                                            como incendios, robos, inundaciones y terremotos.</p>
+                                        <a class="btn btn-light px-3" href="">Saber más</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </li>
+
+                    </ol>
+                </div>
+            </section>
+            <!-- Service End -->
         </div>
     </div>
     <!-- Service End -->
-        
+
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
@@ -264,7 +356,8 @@
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
                     <img class="img-fluid me-3" src="img/icon/seguvim-alterno-blanco.png" alt="">
-                    <p>Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita</p>
+                    <p>Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed
+                        stet lorem sit clita</p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-square me-1" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-square me-1" href=""><i class="fab fa-facebook-f"></i></a>
@@ -290,8 +383,10 @@
                     <h5 class="text-light mb-4">Newsletter</h5>
                     <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
                     <div class="position-relative mx-auto" style="max-width: 400px;">
-                        <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-secondary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                        <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text"
+                            placeholder="Your email">
+                        <button type="button"
+                            class="btn btn-secondary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
                     </div>
                 </div>
             </div>
@@ -330,6 +425,33 @@
     <script src="js/main.js"></script>
     <!-- seguros Javascript -->
     <script src="js/seguros.js"></script>
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 </body>
 
 </html>
