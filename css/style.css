@@ -243,7 +243,7 @@
 }
 
 .container.facts .facts-text {
-    background: linear-gradient(rgba(1, 95, 201, .9), rgba(1, 95, 201, .9)), url(../img/carousel-1.jpg) center right no-repeat;
+    background: linear-gradient(rgba(44, 87, 148, .9), rgba(44, 87, 148, .9)), url(../img/carousel-1.jpg) center right no-repeat;
     background-size: cover;
 }
 
@@ -294,7 +294,7 @@
 
 /*** Appointment ***/
 .appointment {
-    background: linear-gradient(rgba(1, 95, 201, .9), rgba(1, 95, 201, .9)), url(../img/carousel-1.jpg) center center no-repeat;
+    background: linear-gradient(rgba(44, 87, 148, .9), rgba(44, 87, 148, .9)), url(../img/carousel-1.jpg) center center no-repeat;
     background-size: cover;
 }
 
@@ -417,6 +417,7 @@
 
 /*** Footer ***/
 .footer {
+    background-color: #2c5794;
     color: #A7A8B4;
 }
 
@@ -482,5 +483,5 @@
 }
 .botonplanes:hover {
     background: white;
-    color: #196ECD;
+    color: #2c5794;
   }
