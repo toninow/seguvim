@@ -31,56 +31,55 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 
-    <!-- seguro Stylesheet -->
-    <link href="css/seguros.css" rel="stylesheet">
+    <!-- seguro Stylesheet 
+    <link href="css/seguros.css" rel="stylesheet">-->
+
     <style>
-        /* The Modal (background) */
-        .modal {
-            display: none;
-            /* Hidden by default */
-            position: fixed;
-            /* Stay in place */
-            z-index: 1;
-            /* Sit on top */
-            padding-top: 100px;
-            /* Location of the box */
-            left: 0;
-            top: 0;
-            width: 100%;
-            /* Full width */
-            height: 100%;
-            /* Full height */
-            overflow: auto;
-            /* Enable scroll if needed */
-            background-color: rgb(0, 0, 0);
-            /* Fallback color */
-            background-color: rgba(0, 0, 0, 0.4);
-            /* Black w/ opacity */
+        .menu-container {
+            display: flex;
         }
 
-        /* Modal Content */
-        .modal-content {
-            background-color: #fefefe;
-            margin: auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 60%;
+        .menu {
+            flex: 1;
+            padding: 10px;
+            background-color: #f2f2f2;
         }
 
-        /* The Close Button */
-        .close {
-            color: #aaaaaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
+        .menu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
         }
 
-        .close:hover,
-        .close:focus {
-            color: #000;
+        .menu li {
+            margin-bottom: 10px;
+        }
+
+        .menu a {
+            display: block;
+            padding: 5px;
+            background-color: #ddd;
+            color: #333;
             text-decoration: none;
-            cursor: pointer;
         }
+
+        .menu a:hover {
+            background-color: #aaa;
+            color: #fff;
+        }
+
+        .content-container {
+            flex: 3;
+        }
+
+        .section {
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+
     </style>
 </head>
 
@@ -110,7 +109,8 @@
                 <a href="contactanos.html" class="nav-item nav-link">Contáctanos</a>
             </div>
         </div>
-        <a href="https://wa.me/message/KMAYV74IYQM4H1" class="btn btn-primary px-3 d-none d-lg-block">Cotiza con nosotros</a>
+        <a href="https://wa.me/message/KMAYV74IYQM4H1" class="btn btn-primary px-3 d-none d-lg-block">Cotiza con
+            nosotros</a>
     </nav>
     <!-- Navbar End -->
 
@@ -129,15 +129,75 @@
         </div>
     </div>
     <!-- Page Header End -->
+        <!-- About Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="h-100">
+                            <div class="row" style="margin: 5%;">
+                                <div class="col-md-4" style="text-align: center; margin-top: 3%;">
+                                    <div class="menu">
+                                        <ul>
+                                            <li><a href="#" data-section="section-1">Jubilación</a></li>
+                                            <li><a href="#" data-section="section-2">Familia</a></li>
+                                            <li><a href="#" data-section="section-3">Vehículo</a></li>
+                                            <li><a href="#" data-section="section-3">Salud</a></li>
+                                            <li><a href="#" data-section="section-3">Bienes Inmuebles</a></li>
+                                            <li><a href="#" data-section="section-3">Inversiones</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="content-container">
+                                        <div id="section-1" class="section active" align="center">
+                                            <h4 class="mb-0" >Seguro de Vida y Ahorro</h4>
+                                            <p class="mb-4" align="left" style="margin-top: 5%;">
+                                                Es una inversión a mediano o largo plazo
+                                                y requiere una planificación cuidadosa. Sin embargo,
+                                                puede proporcionar tranquilidad y seguridad al saber que uno está protegido
+                                                financieramente
+                                                y que tiene una fuente de ingresos adicional en la jubilación.
+                                            </p>
+                                            <div align="left">
+                                                <div class="row">
+                                                    <div class="col-md-6" style="padding: 1%;">• Seguridad</div>
+                                                    <div class="col-md-6" style="padding: 1%;">• Trasparencia</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6" style="padding: 1%;">• Rentabilidad anual
+                                                        Garantizada</div>
+                                                    <div class="col-md-6" style="padding: 1%;">• Préstamos</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6" style="padding: 1%;">• Anticipo</div>
+                                                    <div class="col-md-6" style="padding: 1%;">• Flexibilidad</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="section-2" class="section" align="center">
+                                            
+                                        </div>
+                                        <div id="section-3" class="section" align="center">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
 
-
-    <!-- Service Start -->
+    <!-- Service Start
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto" style="max-width: 500px;">
                 <h1 class="display-6 mb-5">Es la mejor inversión que puedes hacer en tu futuro.</h1>
             </div>
-            <!-- Service Start -->
+            
             <section class="author-archive">
                 <div class="container">
                     <input type="radio" id="All" name="categories" value="All" checked>
@@ -193,10 +253,10 @@
                                 </div>
                             </article>
 
-                            <!-- The Modal -->
+
                             <div id="myModal" class="modal">
 
-                                <!-- Modal content -->
+
                                 <div class="modal-content">
                                     <span class="close">&times;</span>
                                     <div class="row">
@@ -339,10 +399,12 @@
                     </ol>
                 </div>
             </section>
-            <!-- Service End -->
+            
         </div>
     </div>
-    <!-- Service End -->
+    Service End -->
+
+
 
 
     <!-- Footer Start -->
@@ -405,7 +467,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-    <!-- seguros Javascript -->
+    <!-- seguros Javascript 
     <script src="js/seguros.js"></script>
     <script>
         // Get the modal
@@ -433,6 +495,22 @@
                 modal.style.display = "none";
             }
         }
+    </script>-->
+    <script>
+        const menuLinks = document.querySelectorAll('.menu a');
+        const sections = document.querySelectorAll('.section');
+
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                const selectedSection = document.getElementById(link.dataset.section);
+
+                sections.forEach(section => {
+                    section.classList.remove('active');
+                });
+
+                selectedSection.classList.add('active');
+            });
+        });
     </script>
 </body>
 
