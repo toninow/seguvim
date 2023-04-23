@@ -36,7 +36,6 @@
     <link href="css/popupseguros.css" rel="stylesheet">
     <style>
 
-
     </style>
 </head>
 
@@ -100,12 +99,12 @@
                             <div class="col-md-4" style="text-align: center; margin-top: 3%;">
                                 <div class="menu">
                                     <ul>
-                                        <li><a href="#" data-section="section-1">Jubilación</a></li>
-                                        <li><a href="#" data-section="section-2">Familia</a></li>
-                                        <li><a href="#" data-section="section-3">Vehículo</a></li>
-                                        <li><a href="#" data-section="section-3">Salud</a></li>
-                                        <li><a href="#" data-section="section-3">Bienes Inmuebles</a></li>
-                                        <li><a href="#" data-section="section-3">Inversiones</a></li>
+                                        <li><a class="item-menu" href="#" data-section="section-1" onclick="seleccionarItem(event, 'jubilacion')">Jubilación</a></li>
+                                        <li><a class="item-menu" href="#" data-section="section-2" onclick="seleccionarItem(event, 'familia')">Familia</a></li>
+                                        <li><a class="item-menu" href="#" data-section="section-3" onclick="seleccionarItem(event, 'vehiculo')">Vehículo</a></li>
+                                        <li><a class="item-menu" href="#" data-section="section-3" onclick="seleccionarItem(event, 'salud')">Salud</a></li>
+                                        <li><a class="item-menu" href="#" data-section="section-3" onclick="seleccionarItem(event, 'bienes')">Bienes Inmuebles</a></li>
+                                        <li><a class="item-menu" href="#" data-section="section-3" onclick="seleccionarItem(event, 'inversiones')">Inversiones</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -441,6 +440,7 @@
     <script src="js/main.js"></script>
     <script src="js/planesdesegurosmenu.js"></script>
     <script src="js/popupseguros.js"></script>
+    <script src="js/seguroseleccionado.js"></script>
 </body>
 
 </html>

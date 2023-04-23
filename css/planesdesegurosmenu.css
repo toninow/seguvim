@@ -27,7 +27,7 @@
 }
 
 .menu a:hover {
-  background-color: #aaa;
+  background-color: #015FC9;
   color: #fff;
 }
 
@@ -41,4 +41,10 @@
 
 .active {
   display: block;
+
+}
+
+.item-menu.seleccionado {
+  background-color: #015FC9;
+  color: #fff;
 }
