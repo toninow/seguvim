@@ -102,9 +102,9 @@
                                         <li><a class="item-menu" href="#" data-section="section-1" onclick="seleccionarItem(event, 'jubilacion')">Jubilación</a></li>
                                         <li><a class="item-menu" href="#" data-section="section-2" onclick="seleccionarItem(event, 'familia')">Familia</a></li>
                                         <li><a class="item-menu" href="#" data-section="section-3" onclick="seleccionarItem(event, 'vehiculo')">Vehículo</a></li>
-                                        <li><a class="item-menu" href="#" data-section="section-3" onclick="seleccionarItem(event, 'salud')">Salud</a></li>
-                                        <li><a class="item-menu" href="#" data-section="section-3" onclick="seleccionarItem(event, 'bienes')">Bienes Inmuebles</a></li>
-                                        <li><a class="item-menu" href="#" data-section="section-3" onclick="seleccionarItem(event, 'inversiones')">Inversiones</a></li>
+                                        <li><a class="item-menu" href="#" data-section="section-4" onclick="seleccionarItem(event, 'salud')">Salud</a></li>
+                                        <li><a class="item-menu" href="#" data-section="section-5" onclick="seleccionarItem(event, 'bienes')">Bienes Inmuebles</a></li>
+                                        <li><a class="item-menu" href="#" data-section="section-6" onclick="seleccionarItem(event, 'inversiones')">Inversiones</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -134,23 +134,446 @@
                                                 <div class="col-md-6" style="padding: 1%;">• Flexibilidad</div>
                                             </div>
                                             <div class="row">
-                                                <a class="btn btn-primary px-3 d-lg-block" onclick="mostrarPopup()">Lo quiero!</a>
-                                            </div>
-                                        </div>
-                                        <div class="popup oculto">
-                                            <div class="contenido-popup">
-                                                <!-- Contenido del popup -->
-                                                <h2>Este es el título del popup</h2>
-                                                <p>Este es el contenido del popup.</p>
-                                                <button class="cerrar" onclick="ocultarPopup()">Cerrar</button>
+                                                <h4 class="mb-0" style="text-align: center; padding: 5%;">Mas información</h4>
+                                                <form>
+                                                        <div class="col-md-12">
+                                                            <div class="form-floating">
+                                                                <input type="text" class="form-control" id="nombre" placeholder="Nombre y Apellido">
+                                                                <label for="nombre">Nombre y Apellido</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <div class="form-floating">
+                                                                <input type="email" class="form-control" id="correo" placeholder="Correo Electrónico">
+                                                                <label for="correo">Correo Electrónico</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <div class="form-floating">
+                                                                <select class="form-control" id="select" name="opcion" required>
+                                                                    <option value="">Devolución de Primas</option>
+                                                                    <option value="1">Rendimiento anual del 8.09% promedio</option>
+                                                                    <option value="2">Sin Rendimiento</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <label for="correo">Fecha de Nacimiento</label>
+                                                            <div class="form-floating">
+                                                                <div class="row">
+                                                                    <div class="col-md-4">
+                                                                        <div class="form-floating">
+                                                                            <input type="number" class="form-control" id="dia" min="1" max="31" placeholder="">
+                                                                            <label for="dia">Día</label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <div class="form-floating">
+                                                                            <input type="number" class="form-control" id="mes" min="1" max="12" placeholder="">
+                                                                            <label for="dia">Mes</label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <div class="form-floating">
+                                                                            <input type="number" class="form-control" id="año" min="1920" max="2023" placeholder="">
+                                                                            <label for="dia">Año</label>
+                                                                        </div>
+                                                                    </div>
+                                                                  </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <button class="btn btn-primary py-3 px-5" style="align-items: center;" type="submit">Enviar</button>
+                                                        </div>
+                                                    
+                                                </form>
                                             </div>
                                         </div>
                                     </div>
                                     <div id="section-2" class="section" align="center">
-
+                                        <h4 class="mb-0">Seguro de Vida</h4>
+                                        <p class="mb-4" align="left" style="margin-top: 5%;">
+                                            Sabemos que un fallecimiento es muy doloroso para los seres queridos, 
+                                            nosotros cuidamos de ellos en esos momentos. Los beneficiarios recibirán 
+                                            una indemnización acorde al plan adquirido, esto permitirá garantizar 
+                                            la protección económica que el asegurado tenia a su cargo o haya designado.
+                                        </p>
+                                        <div align="left">
+                                            <div class="row">
+                                                <div class="col-md-6" style="padding: 1%;">• Muerte por Cualquier Cosa</div>
+                                                <div class="col-md-6" style="padding: 1%;">• Muerte Accidental</div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6" style="padding: 1%;">• Incapacidad total y permanente</div>
+                                                <div class="col-md-6" style="padding: 1%;">• Anticipo por enfermedad terminal</div>
+                                            </div>
+                                            <div class="row">
+                                                <h4 class="mb-0" style="text-align: center; padding: 5%;">Mas información</h4>
+                                                <form>
+                                                        <div class="col-md-12">
+                                                            <div class="form-floating">
+                                                                <input type="text" class="form-control" id="nombre" placeholder="Nombre y Apellido">
+                                                                <label for="nombre">Nombre y Apellido</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <div class="form-floating">
+                                                                <input type="email" class="form-control" id="correo" placeholder="Correo Electrónico">
+                                                                <label for="correo">Correo Electrónico</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <div class="form-floating">
+                                                                <select class="form-control" id="select" name="opcion" required>
+                                                                    <option value="">Devolución de Primas</option>
+                                                                    <option value="1">Rendimiento anual del 8.09% promedio</option>
+                                                                    <option value="2">Sin Rendimiento</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <label for="correo">Fecha de Nacimiento</label>
+                                                            <div class="form-floating">
+                                                                <div class="row">
+                                                                    <div class="col-md-4">
+                                                                        <div class="form-floating">
+                                                                            <input type="number" class="form-control" id="dia" min="1" max="31" placeholder="">
+                                                                            <label for="dia">Día</label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <div class="form-floating">
+                                                                            <input type="number" class="form-control" id="mes" min="1" max="12" placeholder="">
+                                                                            <label for="dia">Mes</label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <div class="form-floating">
+                                                                            <input type="number" class="form-control" id="año" min="1920" max="2023" placeholder="">
+                                                                            <label for="dia">Año</label>
+                                                                        </div>
+                                                                    </div>
+                                                                  </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <button class="btn btn-primary py-3 px-5" style="align-items: center;" type="submit">Enviar</button>
+                                                        </div>
+                                                    
+                                                </form>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div id="section-3" class="section" align="center">
-
+                                        <h4 class="mb-0">Seguro Vehicular</h4>
+                                        <p class="mb-4" align="left" style="margin-top: 5%;">
+                                            Sabemos que tú vehículo es importe para ti por eso tenemos el mejor asesoramiento para que lo asegures con nosotros.
+                                        </p>
+                                        <div align="left">
+                                            <div class="row">
+                                                <div class="col-md-6" style="padding: 1%;">• Todo Riesgo</div>
+                                                <div class="col-md-6" style="padding: 1%;">• Pérdida Total</div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6" style="padding: 1%;">• Pérdida Parcial</div>
+                                                <div class="col-md-6" style="padding: 1%;">• Robo</div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6" style="padding: 1%;">• Choque</div>
+                                                <div class="col-md-6" style="padding: 1%;">• Fenómenos Naturales</div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6" style="padding: 1%;">• Accidentes Personales</div>
+                                                <div class="col-md-6" style="padding: 1%;">• Responsabilidad Civil</div>
+                                            </div>
+                                            <h4 class="mb-0" style="text-align: center; padding: 5%;">Beneficios Adicionales</h4>
+                                            <div class="row">
+                                                <div class="col-md-6" style="padding: 1%;">• Auto Sustituto</div>
+                                                <div class="col-md-6" style="padding: 1%;">• Auxilio Mecánico</div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6" style="padding: 1%;">• Gastos Médicos por accidente</div>
+                                            </div>
+                                            <div class="row">
+                                                <h4 class="mb-0" style="text-align: center; padding: 5%;">Mas información</h4>
+                                                <form>
+                                                        <div class="col-md-12">
+                                                            <div class="form-floating">
+                                                                <input type="text" class="form-control" id="nombre" placeholder="Nombre y Apellido">
+                                                                <label for="nombre">Nombre y Apellido</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <div class="form-floating">
+                                                                <input type="email" class="form-control" id="correo" placeholder="Correo Electrónico">
+                                                                <label for="correo">Correo Electrónico</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <div class="form-floating">
+                                                                <select class="form-control" id="select" name="opcion" required>
+                                                                    <option value="">Devolución de Primas</option>
+                                                                    <option value="1">Rendimiento anual del 8.09% promedio</option>
+                                                                    <option value="2">Sin Rendimiento</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <label for="correo">Fecha de Nacimiento</label>
+                                                            <div class="form-floating">
+                                                                <div class="row">
+                                                                    <div class="col-md-4">
+                                                                        <div class="form-floating">
+                                                                            <input type="number" class="form-control" id="dia" min="1" max="31" placeholder="">
+                                                                            <label for="dia">Día</label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <div class="form-floating">
+                                                                            <input type="number" class="form-control" id="mes" min="1" max="12" placeholder="">
+                                                                            <label for="dia">Mes</label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <div class="form-floating">
+                                                                            <input type="number" class="form-control" id="año" min="1920" max="2023" placeholder="">
+                                                                            <label for="dia">Año</label>
+                                                                        </div>
+                                                                    </div>
+                                                                  </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <button class="btn btn-primary py-3 px-5" style="align-items: center;" type="submit">Enviar</button>
+                                                        </div>
+                                                    
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="section-4" class="section" align="center">
+                                        <h4 class="mb-0">Seguro de Salud</h4>
+                                        <p class="mb-4" align="left" style="margin-top: 5%;">
+                                            por que una enfermedad llega sin avisar, esto puede afectar seriamente tu salud y tu economía. 
+                                            Tu salud en las mejores manos te asesoramos para obtener la mejor cobertura a nivel nacional e internacional.
+                                        </p>
+                                        <div align="left">
+                                            <div class="row">
+                                                <div class="col-md-6" style="padding: 1%;">• Enfermedades Graves</div>
+                                                <div class="col-md-6" style="padding: 1%;">• Enfermedades pre-existentes</div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6" style="padding: 1%;">• Tratamientos ambulatorios</div>
+                                                <div class="col-md-6" style="padding: 1%;">• Gastos de hospitalización</div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6" style="padding: 1%;">• Examenes de imagen y laboratorio</div>
+                                                <div class="col-md-6" style="padding: 1%;">• Maternidad</div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6" style="padding: 1%;">• •	Te cubrimos en cualquier parte del mundo</div>
+                                            </div>
+                                            <div class="row">
+                                                <h4 class="mb-0" style="text-align: center; padding: 5%;">Mas información</h4>
+                                                <form>
+                                                        <div class="col-md-12">
+                                                            <div class="form-floating">
+                                                                <input type="text" class="form-control" id="nombre" placeholder="Nombre y Apellido">
+                                                                <label for="nombre">Nombre y Apellido</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <div class="form-floating">
+                                                                <input type="email" class="form-control" id="correo" placeholder="Correo Electrónico">
+                                                                <label for="correo">Correo Electrónico</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <div class="form-floating">
+                                                                <select class="form-control" id="select" name="opcion" required>
+                                                                    <option value="">Devolución de Primas</option>
+                                                                    <option value="1">Rendimiento anual del 8.09% promedio</option>
+                                                                    <option value="2">Sin Rendimiento</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <label for="correo">Fecha de Nacimiento</label>
+                                                            <div class="form-floating">
+                                                                <div class="row">
+                                                                    <div class="col-md-4">
+                                                                        <div class="form-floating">
+                                                                            <input type="number" class="form-control" id="dia" min="1" max="31" placeholder="">
+                                                                            <label for="dia">Día</label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <div class="form-floating">
+                                                                            <input type="number" class="form-control" id="mes" min="1" max="12" placeholder="">
+                                                                            <label for="dia">Mes</label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <div class="form-floating">
+                                                                            <input type="number" class="form-control" id="año" min="1920" max="2023" placeholder="">
+                                                                            <label for="dia">Año</label>
+                                                                        </div>
+                                                                    </div>
+                                                                  </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <button class="btn btn-primary py-3 px-5" style="align-items: center;" type="submit">Enviar</button>
+                                                        </div>
+                                                    
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="section-5" class="section" align="center">
+                                        <h4 class="mb-0">Seguro de Bienes inmuebles</h4>
+                                        <p class="mb-4" align="left" style="margin-top: 5%;">
+                                            Cubre los daños que puede presentar tu vivienda con nosotros.
+                                        </p>
+                                        <div align="left">
+                                            <div class="row">
+                                                <div class="col-md-6" style="padding: 1%;">• Robo</div>
+                                                <div class="col-md-6" style="padding: 1%;">• Incendio</div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6" style="padding: 1%;">• Daños por explosión de Agua</div>
+                                                <div class="col-md-6" style="padding: 1%;">• Equipos Electrónicos</div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6" style="padding: 1%;">• Desastres Naturales</div>
+                                            </div>
+                                            <div class="row">
+                                                <h4 class="mb-0" style="text-align: center; padding: 5%;">Mas información</h4>
+                                                <form>
+                                                        <div class="col-md-12">
+                                                            <div class="form-floating">
+                                                                <input type="text" class="form-control" id="nombre" placeholder="Nombre y Apellido">
+                                                                <label for="nombre">Nombre y Apellido</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <div class="form-floating">
+                                                                <input type="email" class="form-control" id="correo" placeholder="Correo Electrónico">
+                                                                <label for="correo">Correo Electrónico</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <div class="form-floating">
+                                                                <select class="form-control" id="select" name="opcion" required>
+                                                                    <option value="">Devolución de Primas</option>
+                                                                    <option value="1">Rendimiento anual del 8.09% promedio</option>
+                                                                    <option value="2">Sin Rendimiento</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <label for="correo">Fecha de Nacimiento</label>
+                                                            <div class="form-floating">
+                                                                <div class="row">
+                                                                    <div class="col-md-4">
+                                                                        <div class="form-floating">
+                                                                            <input type="number" class="form-control" id="dia" min="1" max="31" placeholder="">
+                                                                            <label for="dia">Día</label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <div class="form-floating">
+                                                                            <input type="number" class="form-control" id="mes" min="1" max="12" placeholder="">
+                                                                            <label for="dia">Mes</label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <div class="form-floating">
+                                                                            <input type="number" class="form-control" id="año" min="1920" max="2023" placeholder="">
+                                                                            <label for="dia">Año</label>
+                                                                        </div>
+                                                                    </div>
+                                                                  </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <button class="btn btn-primary py-3 px-5" style="align-items: center;" type="submit">Enviar</button>
+                                                        </div>
+                                                    
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="section-6" class="section" align="center">
+                                        <h4 class="mb-0">Inversiones</h4>
+                                        <p class="mb-4" align="left" style="margin-top: 5%;">
+                                            Sabemos que ahorrar es una inversión que te permite obtener grandes cosas por eso tenemos la mejor tasa de inversión.
+                                        </p>
+                                        <div align="left">
+                                            <div class="row">
+                                                <div class="col-md-6" style="padding: 1%;">• Mejor Rendimiento Anual</div>
+                                                <div class="col-md-6" style="padding: 1%;">• Seguridad</div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6" style="padding: 1%;">• Respaldo</div>
+                                                <div class="col-md-6" style="padding: 1%;">• Responsabilidad</div>
+                                            </div>
+                                            <div class="row">
+                                                <h4 class="mb-0" style="text-align: center; padding: 5%;">Mas información</h4>
+                                                <form>
+                                                        <div class="col-md-12">
+                                                            <div class="form-floating">
+                                                                <input type="text" class="form-control" id="nombre" placeholder="Nombre y Apellido">
+                                                                <label for="nombre">Nombre y Apellido</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <div class="form-floating">
+                                                                <input type="email" class="form-control" id="correo" placeholder="Correo Electrónico">
+                                                                <label for="correo">Correo Electrónico</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <div class="form-floating">
+                                                                <select class="form-control" id="select" name="opcion" required>
+                                                                    <option value="">Devolución de Primas</option>
+                                                                    <option value="1">Rendimiento anual del 8.09% promedio</option>
+                                                                    <option value="2">Sin Rendimiento</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <label for="correo">Fecha de Nacimiento</label>
+                                                            <div class="form-floating">
+                                                                <div class="row">
+                                                                    <div class="col-md-4">
+                                                                        <div class="form-floating">
+                                                                            <input type="number" class="form-control" id="dia" min="1" max="31" placeholder="">
+                                                                            <label for="dia">Día</label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <div class="form-floating">
+                                                                            <input type="number" class="form-control" id="mes" min="1" max="12" placeholder="">
+                                                                            <label for="dia">Mes</label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <div class="form-floating">
+                                                                            <input type="number" class="form-control" id="año" min="1920" max="2023" placeholder="">
+                                                                            <label for="dia">Año</label>
+                                                                        </div>
+                                                                    </div>
+                                                                  </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <button class="btn btn-primary py-3 px-5" style="align-items: center;" type="submit">Enviar</button>
+                                                        </div>
+                                                    
+                                                </form>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
