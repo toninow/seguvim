@@ -62,12 +62,12 @@
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
-            <h1 class="display-4 animated slideInDown mb-4">Appointment</h1>
+            <h1 class="display-4 animated slideInDown mb-4">Seguro - Protege tu vehículo</h1>
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb mb-0">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Appointment</li>
+                    <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+                    <li class="breadcrumb-item"><a href="#">Página</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Protege tu vehículo</li>
                 </ol>
             </nav>
         </div>

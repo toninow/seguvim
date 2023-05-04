@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Insure - Insurance HTML Template</title>
+    <title>Seguvim - Seguro - Planifica tu jubilación</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -62,18 +62,17 @@
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
-            <h1 class="display-4 animated slideInDown mb-4">Appointment</h1>
+            <h1 class="display-4 animated slideInDown mb-4">Seguro - Planifica tu jubilación</h1>
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb mb-0">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Appointment</li>
+                    <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+                    <li class="breadcrumb-item"><a href="#">Página</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Planifica tu jubilación</li>
                 </ol>
             </nav>
         </div>
     </div>
     <!-- Page Header End -->
-
 
     <!-- Appointment Start -->
     <div class="container-fluid py-5 wow fadeIn" data-wow-delay="0.1s">
