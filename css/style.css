@@ -243,7 +243,7 @@
 }
 
 .container.facts .facts-text {
-    background: linear-gradient(rgba(44, 87, 148, .9), rgba(44, 87, 148, .9)), url(../img/carousel-1.jpg) center right no-repeat;
+    background: linear-gradient(rgba(79, 79, 79, 0.9), rgba(79, 79, 79, 0.9)), url(../img/carousel-1.jpg) center right no-repeat;
     background-size: cover;
 }
 

@@ -3,15 +3,13 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Seguvim - 404</title>
+    <title>Insure - Insurance HTML Template</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta name="author" content="RBEstudio">
-    <meta content="Seguros de vida, Seguros de hogar, Seguros de automóviles, Seguros de salud, Seguros de viaje, Seguros para empresas, Protección de ingresos, Seguros de mascotas, Seguros para personas mayores,Pólizas de seguros, Seguros de decesos, Seguros de ahorro, Seguros de ahorro e inversión, Seguros para autónomos, Seguros para comercios, Seguros de jubilación, Seguros para alquileres" name="keywords">
-    <meta name="description" content="Lo sentimos, la página que estás buscando no se encuentra disponible. Si estás buscando información sobre nuestros servicios de seguros, te invitamos a explorar nuestras otras páginas. También puedes ponerte en contacto con nuestro equipo de atención al cliente para obtener más información. En nuestra empresa de seguros, nos dedicamos a ofrecer soluciones personalizadas y de calidad para proteger lo que más importa. ¡Gracias por visitar Seguvim!">
-
+    <meta content="" name="keywords">
+    <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="img/icon/favicon.ico" rel="icon">
+    <link href="img/favicon.ico" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -52,52 +50,93 @@
             <div class="navbar-nav mx-auto bg-light rounded pe-4 py-3 py-lg-0">
                 <a href="index.html" class="nav-item nav-link">Inicio</a>
                 <a href="nosotros.html" class="nav-item nav-link">Nosotros</a>
-                <a href="planesdeseguro.html" class="nav-item nav-link">Planes de seguros</a>
+                <a href="planesdeseguro.html" class="nav-item nav-link active">Planes de seguros</a>
                 <a href="trabajaconosotros.html" class="nav-item nav-link">Trabaja con nosotros</a>
-                <a href="contactanos.html" class="nav-item nav-link">Contáctanos</a>
+                <a href="contactanos.php" class="nav-item nav-link">Contáctanos</a>
             </div>
         </div>
-        <a href="https://wa.me/message/KMAYV74IYQM4H1" class="btn btn-primary px-3 d-none d-lg-block">Cotiza con
-            nosotros</a>
+        <a href="https://wa.me/message/KMAYV74IYQM4H1" class="btn btn-primary px-3 d-none d-lg-block">Cotiza con nosotros</a>
     </nav>
     <!-- Navbar End -->
-
 
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
-            <h1 class="display-4 animated slideInDown mb-4">404 Error</h1>
+            <h1 class="display-4 animated slideInDown mb-4">Appointment</h1>
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb mb-0">
-                    <li class="breadcrumb-item"><a href="#">Inicio</a></li>
-                    <li class="breadcrumb-item"><a href="#">Página</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">404 Error</li>
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Appointment</li>
                 </ol>
             </nav>
         </div>
     </div>
     <!-- Page Header End -->
 
-
-    <!-- 404 Start -->
-    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container text-center">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <i class="bi bi-exclamation-triangle display-1 text-primary"></i>
-                    <h1 class="display-1">404</h1>
-                    <h1 class="mb-4">=No encuentras lo que buscas?</h1>
-                    <p class="mb-4">Por favor vuelve a la página de inicio</p>
-                    <a class="btn btn-primary py-3 px-5" href="index.html">Volver</a>
+    <!-- Appointment Start -->
+    <div class="container-fluid py-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.3s">
+                    <h1 class="display-6 mb-5">We're Award Winning Insurance Company</h1>
+                    <p class="mb-5">Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet. Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna.</p>
+                    <div class="bg-light rounded p-3">
+                        <div class="d-flex align-items-center bg-white rounded p-3">
+                            <img class="flex-shrink-0 rounded-circle me-3" src="img/profile.jpg" alt="" >
+                            <h5 class="mb-0">Call Us: +012 345 6789</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="bg-light rounded p-5">
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="gname" placeholder="Gurdian Name">
+                                        <label for="gname">Your Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" id="gmail" placeholder="Gurdian Email">
+                                        <label for="gmail">Your Email</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="cname" placeholder="Child Name">
+                                        <label for="cname">Your Mobile</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="cage" placeholder="Child Age">
+                                        <label for="cage">Service Type</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 80px"></textarea>
+                                        <label for="message">Message</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-primary py-3 px-5" type="submit">Get Appointment</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- 404 End -->
+    <!-- Appointment End -->
         
 
-    <!-- Footer Start -->
-    <div class="container-fluid bg footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+        <!-- Footer Start -->
+        <div class="container-fluid bg footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-3">
