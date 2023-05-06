@@ -14,7 +14,7 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@600;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -79,11 +79,36 @@
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.3s">
-                    <p class="mb-5">Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet. Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna.</p>
+                    <p class="mb-5">Es la mejor forma de planificar tu futuro y garantizar el de tus seres queridos duerme tranquilo y planifica desde hoy !.</p>
+                    <p class="mb-5"> El seguro de vida y ahorro para la jubilación es una inversión a largo plazo y requiere una planificación cuidadosa. Sin embargo, puede proporcionar tranquilidad al saber que uno está protegido financieramente en caso de la muerte y que tiene una fuente de ingresos adicional en la jubilación.</p>
                     <div class="bg-light rounded p-3">
                         <div class="d-flex align-items-center bg-white rounded p-3">
-                            <img class="flex-shrink-0 rounded-circle me-3" src="img/profile.jpg" alt="" >
-                            <h5 class="mb-0">Call Us: +012 345 6789</h5>
+                            <p class="mb-0">• Seguridad</p>
+                        </div>
+                    </div>
+                    <div class="bg-light rounded p-3">
+                        <div class="d-flex align-items-center bg-white rounded p-3">
+                            <p class="mb-0">• Trasparencia</p>
+                        </div>
+                    </div>
+                    <div class="bg-light rounded p-3">
+                        <div class="d-flex align-items-center bg-white rounded p-3">
+                            <p class="mb-0">• Rentabilidad anual Garantizada</p>
+                        </div>
+                    </div>
+                    <div class="bg-light rounded p-3">
+                        <div class="d-flex align-items-center bg-white rounded p-3">
+                            <p class="mb-0">• Prestamos</p>
+                        </div>
+                    </div>
+                    <div class="bg-light rounded p-3">
+                        <div class="d-flex align-items-center bg-white rounded p-3">
+                            <p class="mb-0">• Anticipos</p>
+                        </div>
+                    </div>
+                    <div class="bg-light rounded p-3">
+                        <div class="d-flex align-items-center bg-white rounded p-3">
+                            <p class="mb-0">• Flexibilidad</p>
                         </div>
                     </div>
                 </div>
@@ -91,40 +116,62 @@
                     <div class="bg-light rounded p-5">
                         <form>
                             <div class="row g-3">
+                                
                                 <div class="col-sm-6">
+                                    <label for="gname">Nombres</label>
                                     <div class="form-floating">
                                         <input type="text" class="form-control" id="gname" placeholder="Gurdian Name">
-                                        <label for="gname">Your Name</label>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
+                                    <label for="gname">Apellidos</label>
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="gname" placeholder="Gurdian Name">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="correo">Correo electrónico</label>
                                     <div class="form-floating">
                                         <input type="email" class="form-control" id="gmail" placeholder="Gurdian Email">
-                                        <label for="gmail">Your Email</label>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
+                                    <label for="correo">Fecha de Nacimiento</label>
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="cname" placeholder="Child Name">
-                                        <label for="cname">Your Mobile</label>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="cage" placeholder="Child Age">
-                                        <label for="cage">Service Type</label>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="form-floating">
+                                                    <input type="number" class="form-control" id="dia" min="1" max="31" placeholder="">
+                                                    <label for="dia">Día</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-floating">
+                                                    <input type="number" class="form-control" id="mes" min="1" max="12" placeholder="">
+                                                    <label for="dia">Mes</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-floating">
+                                                    <input type="number" class="form-control" id="anio" min="1920" max="2023" placeholder="">
+                                                    <label for="dia">Año</label>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 80px"></textarea>
-                                        <label for="message">Message</label>
+                                        <select class="form-control" id="select" name="opcion" required>
+                                            <option value="">Devolución de Primas</option>
+                                            <option value="1">Rendimiento anual del 8.09% promedio</option>
+                                            <option value="2">Sin Rendimiento</option>
+                                        </select>
                                     </div>
                                 </div>
-                                <div class="col-12">
-                                    <button class="btn btn-primary py-3 px-5" type="submit">Get Appointment</button>
+                                <div class="col-12" align="center">
+                                    <button class="btn btn-primary py-3 px-5" type="submit">Obtener Seguro!</button>
                                 </div>
-                            </div>
                         </form>
                     </div>
                 </div>
@@ -132,7 +179,7 @@
         </div>
     </div>
     <!-- Appointment End -->
-        
+
     <!-- Footer Start -->
     <div class="container-fluid bg footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
