@@ -116,7 +116,6 @@
                     <div class="bg-light rounded p-5">
                         <form>
                             <div class="row g-3">
-                                
                                 <div class="col-sm-6">
                                     <label for="gname">Nombres</label>
                                     <div class="form-floating">

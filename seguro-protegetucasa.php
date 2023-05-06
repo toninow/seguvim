@@ -79,12 +79,30 @@
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.3s">
-                    <h1 class="display-6 mb-5">We're Award Winning Insurance Company</h1>
-                    <p class="mb-5">Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet. Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna.</p>
+                    <p class="mb-5">Cubre los daños que puede presentar tu vivienda con nosotros.</p>
                     <div class="bg-light rounded p-3">
                         <div class="d-flex align-items-center bg-white rounded p-3">
-                            <img class="flex-shrink-0 rounded-circle me-3" src="img/profile.jpg" alt="" >
-                            <h5 class="mb-0">Call Us: +012 345 6789</h5>
+                            <p class="mb-0">•	Robo </p>
+                        </div>
+                    </div>
+                    <div class="bg-light rounded p-3">
+                        <div class="d-flex align-items-center bg-white rounded p-3">
+                            <p class="mb-0">•	Incendio</p>
+                        </div>
+                    </div>
+                    <div class="bg-light rounded p-3">
+                        <div class="d-flex align-items-center bg-white rounded p-3">
+                            <p class="mb-0">•	Daños por explosión de agua</p>
+                        </div>
+                    </div>
+                    <div class="bg-light rounded p-3">
+                        <div class="d-flex align-items-center bg-white rounded p-3">
+                            <p class="mb-0">•	Equipos electrónicos</p>
+                        </div>
+                    </div>
+                    <div class="bg-light rounded p-3">
+                        <div class="d-flex align-items-center bg-white rounded p-3">
+                            <p class="mb-0">•	Desastres naturales</p>
                         </div>
                     </div>
                 </div>

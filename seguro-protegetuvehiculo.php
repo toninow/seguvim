@@ -79,41 +79,113 @@
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.3s">
-                    <h1 class="display-6 mb-5">We're Award Winning Insurance Company</h1>
-                    <p class="mb-5">Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet. Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna.</p>
+                    <p class="mb-5">Sabemos que tú vehículo es importe para ti por eso tenemos el mejor asesoramiento para que lo asegures con nosotros.</p>
                     <div class="bg-light rounded p-3">
                         <div class="d-flex align-items-center bg-white rounded p-3">
-                            <img class="flex-shrink-0 rounded-circle me-3" src="img/profile.jpg" alt="" >
-                            <h5 class="mb-0">Call Us: +012 345 6789</h5>
+                            <p class="mb-0">•	Todo riesgo</p>
                         </div>
                     </div>
+                    <div class="bg-light rounded p-3">
+                        <div class="d-flex align-items-center bg-white rounded p-3">
+                            <p class="mb-0">•	Todo riesgo</p>
+                        </div>
+                    </div>
+                    <div class="bg-light rounded p-3">
+                        <div class="d-flex align-items-center bg-white rounded p-3">
+                            <p class="mb-0">•	Perdida Total</p>
+                        </div>
+                    </div>
+                    <div class="bg-light rounded p-3">
+                        <div class="d-flex align-items-center bg-white rounded p-3">
+                            <p class="mb-0">•	Perdida Parcial</p>
+                        </div>
+                    </div>
+                    <div class="bg-light rounded p-3">
+                        <div class="d-flex align-items-center bg-white rounded p-3">
+                            <p class="mb-0">•	Robo</p>
+                        </div>
+                    </div>
+                    <div class="bg-light rounded p-3">
+                        <div class="d-flex align-items-center bg-white rounded p-3">
+                            <p class="mb-0">•	Choque</p>
+                        </div>
+                    </div>
+                    <div class="bg-light rounded p-3">
+                        <div class="d-flex align-items-center bg-white rounded p-3">
+                            <p class="mb-0">•	Fenómenos naturales</p>
+                        </div>
+                    </div>
+                    <div class="bg-light rounded p-3">
+                        <div class="d-flex align-items-center bg-white rounded p-3">
+                            <p class="mb-0">•	Accidentes personales</p>
+                        </div>
+                    </div>
+                    <div class="bg-light rounded p-3">
+                        <div class="d-flex align-items-center bg-white rounded p-3">
+                            <p class="mb-0">•	Responsabilidad civil</p>
+                        </div>
+                    </div>
+                    <div class="bg-light rounded p-3">
+                        <div class="d-flex align-items-center bg-white rounded p-3">
+                            <p class="mb-0">•	Auto sustituto</p>
+                        </div>
+                    </div>
+                    <div class="bg-light rounded p-3">
+                        <div class="d-flex align-items-center bg-white rounded p-3">
+                            <p class="mb-0">•	Auxilio mecánico</p>
+                        </div>
+                    </div>
+                    <div class="bg-light rounded p-3">
+                        <div class="d-flex align-items-center bg-white rounded p-3">
+                            <p class="mb-0">•	Gastos médicos por accidente</p>
+                        </div>
+                    </div>
+                    <p>Se asegura de todo riesgo hasta 12 años de antigüedad</p>
                 </div>
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                     <div class="bg-light rounded p-5">
                         <form>
                             <div class="row g-3">
                                 <div class="col-sm-6">
+                                    <label for="gname">Nombres</label>
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="gname" placeholder="Gurdian Name">
-                                        <label for="gname">Your Name</label>
+                                        <input type="text" class="form-control" id="nombres" placeholder="Gurdian Name">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
+                                    <label for="gname">Apellidos</label>
                                     <div class="form-floating">
-                                        <input type="email" class="form-control" id="gmail" placeholder="Gurdian Email">
-                                        <label for="gmail">Your Email</label>
+                                        <input type="text" class="form-control" id="apellidos" placeholder="Gurdian Name">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
+                                    <label for="correo">Correo electrónico</label>
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="cname" placeholder="Child Name">
-                                        <label for="cname">Your Mobile</label>
+                                        <input type="email" class="form-control" id="correo" placeholder="Gurdian Email">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
+                                    <label for="gname">Marca</label>
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="cage" placeholder="Child Age">
-                                        <label for="cage">Service Type</label>
+                                        <input type="text" class="form-control" id="marca" placeholder="Gurdian Name">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="gname">Modelo</label>
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="marca" placeholder="Gurdian Name">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="gname">Año</label>
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="anio" placeholder="Gurdian Name">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="gname">Placa</label>
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="anio" placeholder="Gurdian Name">
                                     </div>
                                 </div>
                                 <div class="col-12">
@@ -123,7 +195,7 @@
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <button class="btn btn-primary py-3 px-5" type="submit">Get Appointment</button>
+                                    <button class="btn btn-primary py-3 px-5" type="submit">Obtener Seguro!</button>
                                 </div>
                             </div>
                         </form>
