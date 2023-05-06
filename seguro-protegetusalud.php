@@ -82,8 +82,37 @@
                     <p class="mb-5"></p>
                     <div class="bg-light rounded p-3">
                         <div class="d-flex align-items-center bg-white rounded p-3">
-                            <img class="flex-shrink-0 rounded-circle me-3" src="img/profile.jpg" alt="" >
-                            <h5 class="mb-0">Call Us: +012 345 6789</h5>
+                            <p class="mb-0">•	Enfermedades Graves</p>
+                        </div>
+                    </div>
+                    <div class="bg-light rounded p-3">
+                        <div class="d-flex align-items-center bg-white rounded p-3">
+                            <p class="mb-0">•	Enfermedades pre-existentes</p>
+                        </div>
+                    </div>
+                    <div class="bg-light rounded p-3">
+                        <div class="d-flex align-items-center bg-white rounded p-3">
+                            <p class="mb-0">•	Tratamientos ambulatorios</p>
+                        </div>
+                    </div>
+                    <div class="bg-light rounded p-3">
+                        <div class="d-flex align-items-center bg-white rounded p-3">
+                            <p class="mb-0">•	Gastos de hospitalización</p>
+                        </div>
+                    </div>
+                    <div class="bg-light rounded p-3">
+                        <div class="d-flex align-items-center bg-white rounded p-3">
+                            <p class="mb-0">•	Examenes de imagen y laboratorio</p>
+                        </div>
+                    </div>
+                    <div class="bg-light rounded p-3">
+                        <div class="d-flex align-items-center bg-white rounded p-3">
+                            <p class="mb-0">•	Maternidad</p>
+                        </div>
+                    </div>
+                    <div class="bg-light rounded p-3">
+                        <div class="d-flex align-items-center bg-white rounded p-3">
+                            <p class="mb-0">•	Te cubrimos en cualquier parte del mundo</p>
                         </div>
                     </div>
                 </div>

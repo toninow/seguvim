@@ -162,9 +162,10 @@
                                 <div class="col-12">
                                     <div class="form-floating">
                                         <select class="form-control" id="select" name="opcion" required>
-                                            <option value="">Devolución de Primas</option>
-                                            <option value="1">Rendimiento anual del 8.09% promedio</option>
-                                            <option value="2">Sin Rendimiento</option>
+                                            <option value="">Tipo de plan</option>
+                                            <option value="">Económico</option>
+                                            <option value="">Standard</option>
+                                            <option value="">Gold</option>
                                         </select>
                                     </div>
                                 </div>
